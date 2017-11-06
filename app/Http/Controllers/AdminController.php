@@ -11,45 +11,14 @@ use taxi\User;
 
 class AdminController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-
 	public function __construct(){
-
-		$this->middleware('auth');
-
-		/*guest sirve para cuando NO este logueado todos puedan ver las view
-		y auth sirve para cuando este logueado solo los usuarios registrados puedan ver las views*/
+		$this->middleware('admin-only');
 	}
 
 	public function index(Guard $auth){
 		
-		if ($auth->user()->Normal()) {
 
-			return view('desktop');
-
-		} else {
-
-			return redirect('admin');
-
-		}
-	}
-
-
-	public function admin(Guard $auth){
-
-		if ($auth->user()->admin()) {
-
-			return view('admin');
-
-		}else{
-
-			return view('desktop');
-
-		}
+		return redirect('admin');
 	}
 
 	/**

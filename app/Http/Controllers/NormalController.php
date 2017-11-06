@@ -16,9 +16,10 @@ class NormalController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		//
+	public function index(){
+
+	
+		return view('desktop');
 	}
 
 	/**

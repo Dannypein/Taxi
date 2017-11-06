@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('home', 'WelcomeController@index');
+Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'home']);
 
-Route::get('/', [
-	'uses' => 'WelcomeController@index',
-	'as' => 'home'
-]);
+Route::get('home', 'WelcomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -25,6 +22,6 @@ Route::controllers([
 
 /*----Rutas de inicio de sesion de usuario normal y admin----*/
 
-Route::get('/desktop', 'AdminController@index');
+Route::get('/desktop', 'NormalController@index');
 
-Route::get('/admin', 'AdminController@admin');
+Route::get('/admin', 'AdminController@index');
