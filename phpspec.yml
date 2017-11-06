@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: taxi
+        psr4_prefix: taxi
+        src_path: app

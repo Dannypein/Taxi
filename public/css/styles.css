@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: table;
+	font-weight: 100;
+	/*font-family: 'Roboto', sans-serif;*/
+}
+
+footer{
+	/*min-height: 10vh;*/
+	width: 100%;
+	text-align: center;
+	/*opacity: 0.5;
+    filter: alpha(opacity=50);*/
+}
+
+main{
+	min-height: 100%;
+}
+
+/*--------Custom CSS-------*/
+
+.container{
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.jumbotron{
+	background-color: #FFEB3B !important;
+	opacity: 0.8;
+}
+
+.img-background{
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+	left: 0;
+	position: absolute;
+	background-image: url('/img/taxi1.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+
+.panel-heading{
+	background-color: #FFEB3B !important;
+	color: #3E3F3A !important;
+}
