@@ -27,6 +27,7 @@ class Kernel extends HttpKernel {
 		'auth' => 'taxi\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'taxi\Http\Middleware\RedirectIfAuthenticated',
+		'admin-only' => 'taxi\Http\Middleware\AdminOnly',
 	];
 
 }
